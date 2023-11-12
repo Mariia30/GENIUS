@@ -231,8 +231,16 @@ p .accent {
 
 /*Chefs section*/
 .chefs-title {
-  max-width: 520px;
   margin: 0 auto 80px;
+  position: relative;
+}
+
+.chefs-title::after {
+  right: 0;
+}
+
+.chefs-title::before {
+  left: 0;
 }
 
 .chefs-title::after,
@@ -242,6 +250,8 @@ p .accent {
   height: 2px;
   background-color: var(--color-brand-light);
   content: "";
+  position: absolute;
+  bottom: 24px;
 }
 
 .chef-title {
@@ -263,7 +273,7 @@ p .accent {
 }
 
 .chefs-item {
-flex-basis: calc(100% - 30px/2);
+  flex-basis: calc(100% - 30px / 2);
 }
 
 .chef-card {
@@ -272,7 +282,7 @@ flex-basis: calc(100% - 30px/2);
 }
 
 .chef-text p {
-margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .chef-text p:last-child {
@@ -291,9 +301,10 @@ margin-bottom: 24px;
   border: 1px solid lightgray; /*remove*/
   background: linear-gradient(
     180deg,
-    rgba(49, 38, 26, 0.00) 55.21%,
+    rgba(49, 38, 26, 0) 55.21%,
     rgba(49, 38, 26, 0.71) 72.92%,
-    var(--color-primary-dark) 100%);
+    var(--color-primary-dark) 100%
+  );
 }
 
 .formats-title {
@@ -340,17 +351,17 @@ button.carousel-button:hover {
 
 /*Contact section*/
 .contact-section {
-padding-bottom: 96px;
+  padding-bottom: 96px;
 }
 
 .contact-container {
-display: flex;
-gap: 32px;
+  display: flex;
+  gap: 32px;
 }
 
 .contact-map {
   flex-shrink: 0;
- border-radius: 16px;
+  border-radius: 16px;
   border: none;
 }
 
@@ -359,10 +370,6 @@ gap: 32px;
 }
 
 /*Footer*/
-.footer {
-  padding: 32px 0;
-}
-
 .footer-container {
   display: flex;
   gap: 20px;
@@ -408,9 +415,65 @@ gap: 32px;
 }
 
 .footer {
+  padding: 32px 0;
   background-color: var(--color-primary-dark);
   background-image: url(../img/footer-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+.footer::after,
+.footer::before {
+  position: absolute;
+  background-repeat: no-repeat;
+  content: "";
+  bottom: 0;
+}
+
+.footer::after {
+  background-image: url(/img/cut-decor-bread-small.png);
+  width: 180px;
+  height: 120px;
+  left: 0;
+}
+
+.footer::before {
+  background-image: url(/img/cut-decor-bread-large.png);
+  width: 380px;
+  height: 190px;
+  right: 0;
+}
+
+/*Modal*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 880px;
+  height: 880px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+}
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
