@@ -4,28 +4,24 @@
   font-weight: 300;
   src: url("../fonts/poppins-v20-latin-300.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
   font-weight: 400;
   src: url("../fonts/poppins-v20-latin-regular.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
   font-weight: 600;
   src: url("../fonts/poppins-v20-latin-600.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
   font-weight: 900;
   src: url("../fonts/poppins-v20-latin-900.woff2") format("woff2");
 }
-
 :root {
   --color-brand: #819b57;
   --color-brand-light: #cfcfbc;
@@ -36,7 +32,6 @@
   --color-background: #faf4ea;
 }
 
-/*Base*/
 *,
 *::after,
 *::before {
@@ -76,6 +71,15 @@ h6 {
   margin-top: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 1288px;
@@ -87,15 +91,6 @@ h6 {
   padding: 48px 0;
 }
 
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-/*Button*/
 .button {
   padding: 16px 32px;
   background-color: var(--color-brand);
@@ -106,24 +101,42 @@ h6 {
   font-weight: 600;
 }
 
+.button:disabled {
+  color: gray;
+  background-color: lightgray;
+  border-color: currentColor;
+  cursor: not-allowed;
+}
+
 .button:hover {
   background-color: transparent;
   color: var(--color-brand-dark);
 }
 
-/*Link*/
-.link {
+.hero-section {
+  padding: 272px 0;
+  background-image: linear-gradient(rgba(18, 18, 17, 0.78), rgba(18, 18, 17, 0.6), rgba(18, 18, 17, 0)), url("../img/couple-in-bakery.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.hero-title {
   color: var(--color-primary-light);
-  text-decoration: none;
-  transition: color 0.3s;
+  text-align: center;
+  font-weight: 900;
+  font-size: 128px;
+  margin-bottom: 0;
 }
 
-.link:hover {
+.hero-title .accent {
   color: var(--color-brand);
-  text-decoration: underline;
 }
 
-/*Header*/
+p .accent {
+  color: var(--color-brand);
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -152,37 +165,6 @@ h6 {
   justify-content: center;
 }
 
-/*Hero section*/
-.hero-section {
-  padding: 272px 0;
-  background-image: linear-gradient(
-      rgba(18, 18, 17, 0.78),
-      rgba(18, 18, 17, 0.6),
-      rgba(18, 18, 17, 0)
-    ),
-    url("../img/couple-in-bakery.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-}
-
-.hero-title {
-  color: var(--color-primary-light);
-  text-align: center;
-  font-weight: 900;
-  font-size: 128px;
-  margin-bottom: 0;
-}
-
-.hero-title .accent {
-  color: var(--color-brand);
-}
-
-p .accent {
-  color: var(--color-brand);
-}
-
-/*Advantages section*/
 .advantages-section {
   background-color: var(--color-brand);
   padding: 16px 0;
@@ -205,14 +187,15 @@ p .accent {
   font-size: 64px;
   font-weight: 900;
 }
+
 .section-title.centered {
   text-align: center;
 }
+
 .section-title .accent {
   color: var(--color-brand-dark);
 }
 
-/*Traditions section*/
 .traditions-section {
   padding-top: 96px;
 }
@@ -226,6 +209,7 @@ p .accent {
 .traditions-content {
   max-width: 710px;
 }
+
 .traditions-title {
   margin-bottom: 42px;
 }
@@ -243,7 +227,6 @@ p .accent {
   text-transform: uppercase;
 }
 
-/*Chefs section*/
 .chefs-title {
   margin: 0 auto 80px;
   position: relative;
@@ -276,8 +259,7 @@ p .accent {
 
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0 0 var(--color-background),
-    -16px 16px 0 2px var(--color-secondary-dark);
+  box-shadow: -16px 16px 0 0 var(--color-background), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 .chefs-list {
@@ -302,7 +284,7 @@ p .accent {
 .chef-text p:last-child {
   margin-bottom: 0;
 }
-/*Formats section*/
+
 .formats-container {
   display: flex;
   gap: 32px;
@@ -313,12 +295,7 @@ p .accent {
   height: 444px;
   padding: 24px;
   border: 1px solid var(--color-brand-light); /*remove*/
-  background: linear-gradient(
-    180deg,
-    rgba(49, 38, 26, 0) 55.21%,
-    rgba(49, 38, 26, 0.71) 72.92%,
-    var(--color-primary-dark) 100%
-  );
+  background: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
   transition: transform 0.3s;
   border-radius: 16px;
 }
@@ -350,7 +327,7 @@ p .accent {
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
 }
-/*Carousel*/
+
 button.carousel-button {
   display: flex;
   align-items: center;
@@ -369,7 +346,6 @@ button.carousel-button:hover {
   background-color: var(--color-primary-dark);
 }
 
-/*Contact section*/
 .contact-section {
   padding-bottom: 96px;
 }
@@ -390,7 +366,6 @@ button.carousel-button:hover {
   margin-bottom: 16px;
 }
 
-/*Footer*/
 .footer-container {
   display: flex;
   gap: 20px;
@@ -407,6 +382,7 @@ button.carousel-button:hover {
 .footer-logo {
   flex-grow: 1;
 }
+
 .address-info,
 .address-list {
   flex-grow: 1;
@@ -467,7 +443,6 @@ button.carousel-button:hover {
   right: 0;
 }
 
-/*Modal*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -498,13 +473,13 @@ button.carousel-button:hover {
   border-radius: 32px;
   overflow-y: auto;
 }
+
 .modal-btn-close {
   position: absolute;
   top: 40px;
   right: 40px;
 }
 
-/*Form*/
 .form-field {
   position: relative;
   margin-bottom: 32px;
@@ -519,15 +494,37 @@ button.carousel-button:hover {
   font-size: 16px;
 }
 
+.form-input:disabled {
+  border-color: var(--color-brand);
+}
+
+.form-input:disabled::-moz-placeholder {
+  color: gray;
+}
+
+.form-input:disabled::placeholder {
+  color: gray;
+}
+
 .form-input:focus {
   border-color: var(--color-brand);
   outline: none;
 }
 
+.form-input::-moz-placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
 .form-input::placeholder {
-color: var(--color-secondary-dark);
-font-size: 16px;
-line-height: 1.17;
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.form-input:focus::-moz-placeholder {
+  color: var(--color-primary-dark);
 }
 
 .form-input:focus::placeholder {
@@ -535,9 +532,9 @@ line-height: 1.17;
 }
 
 .form-label {
-position: absolute;
-left: 42px;
-top: 16px;
+  position: absolute;
+  left: 42px;
+  top: 16px;
 }
 
 .form-button {
@@ -555,6 +552,17 @@ top: 16px;
 }
 
 .form-terms-link {
-color: var(--color-primary-dark);
-text-underline-offset: 2px;
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
 }
+
+.link {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: var(--color-brand);
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */
