@@ -9,21 +9,14 @@
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
+
+	&__title {
+		color: var(--color-primary-light);
+		text-align: center;
+		font-weight: 900;
+		font-size: 128px;
+		margin-bottom: 0;
+	 }
  }
- 
- .hero-title {
-	color: var(--color-primary-light);
-	text-align: center;
-	font-weight: 900;
-	font-size: 128px;
-	margin-bottom: 0;
- }
- 
- .hero-title .accent {
-	color: var(--color-brand);
- }
- 
- p .accent {
-	color: var(--color-brand);
- }
+
  
