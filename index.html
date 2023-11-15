@@ -24,8 +24,15 @@
                         <li><a class="link" href="#contact-section">Контакти</a></li>
                     </ul>
                 </nav>
-                <button class="button modal-btn-open" type="button">Замовити дзвінок</button>
-                <!--замовити дзвінок-->
+                <button class="header__button button modal-btn-open" type="button">Замовити дзвінок</button>
+                <button class="header__burger menu-btn-open" type="button">
+                    <svg width="24" height="24">
+                        <use href="/img/symbol-defs.svg#menu"></use>
+                    </svg>
+                </button>
+                <div class="mobile-menu">
+                    <button class="mobile-menu__btn-close menu-btn-close" type="button">Close</button>
+                </div>
             </div>
         </div>
     </header>
@@ -33,6 +40,7 @@
         <section class="hero-section">
             <div class="container">
                 <h1 class="hero-section__title"><span class="text-brand">Сучасна</span> пекарня</h1>
+                <button class="hero-section__button button modal-btn-open" type="button">Замовити дзвінок</button>
             </div>
         </section>
         <section class="advantages-section">
@@ -53,20 +61,24 @@
                         <p><span class="text-uppercase text-brand text-bold">shop bakery</span> — це пекарня, яка
                             взяла все найкраще, і зберегла смак традиційної випічки та
                             натуральність інгредієнтів.</p>
-                        <p class="traditions-section__text traditions-section__text--limited">Ми працюємо як найвідоміші мережі—
-                            <span class="text-brand text-bold">5 хвилин і замовлення готове.</span> А ще у наших пекарень стильний
+                        <p class="traditions-section__text traditions-section__text--limited">Ми працюємо як найвідоміші
+                            мережі—
+                            <span class="text-brand text-bold">5 хвилин і замовлення готове.</span> А ще у наших
+                            пекарень стильний
                             дизайн та висока якість обслуговування!
                         </p>
                     </div>
-                    <div class="">
-                        <img src="img/baker-man.jpg" alt="Чоловік пекар дивиться на батони з посмішкою">
+                    <div class="traditions-section__image">
+                        <img srcset="img/baker-man.jpg 1x, img/baker-manX2.jpg 2x"
+                        src="img/baker-man.jpg" alt="Чоловік пекар дивиться на батони з посмішкою">
                     </div>
                 </div>
             </div>
         </section>
         <section class="chefs-section section" id="chefs-section">
             <div class="container">
-                <h2 class="chefs-section__title section__title section__title--centered">Наші найкращі <br><span class="text-brand-dark">шеф-кухарі</span>
+                <h2 class="chefs-section__title section__title section__title--centered">Наші найкращі <br><span
+                        class="text-brand-dark">шеф-кухарі</span>
                 </h2>
                 <ul class="chefs-section__list">
                     <li class="chefs-section__item">
@@ -78,7 +90,8 @@
                                 </h3>
                                 <div class="chef-card__text">
                                     <p class="chef-card__text">Привіт, я Настя!</p>
-                                    <p class="chef-card__text">Вже 10 років, я втілюю <br>у життя цікаві та смачні ідеї.</p>
+                                    <p class="chef-card__text">Вже 10 років, я втілюю <br>у життя цікаві та смачні ідеї.
+                                    </p>
                                     <p class="chef-card__text">Я випічу для вас <br>найсмачніщі вироби!</p>
                                 </div>
                             </div>
@@ -91,10 +104,11 @@
                                 <h3 class="chef-card__title">
                                     Влад
                                 </h3>
-                                    <p class="chef-card__text">Привіт, я Влад!</p>
-                                    <p class="chef-card__text">Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша любов, з
-                                        якою ми ділимось кожен раз з Вами через нашу випічку!</p>
-                                    <p class="chef-card__text">Я зроблю для вас унікальну начинку на будь який смак!</p>
+                                <p class="chef-card__text">Привіт, я Влад!</p>
+                                <p class="chef-card__text">Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша
+                                    любов, з
+                                    якою ми ділимось кожен раз з Вами через нашу випічку!</p>
+                                <p class="chef-card__text">Я зроблю для вас унікальну начинку на будь який смак!</p>
                             </div>
                         </article>
                     </li>
@@ -164,22 +178,26 @@
                         <p>Заповни форму, щоб ми звʼязались з тобою!</p>
                         <form name="contact-form" autocomplete="off">
                             <div class="contact-section__form-field input">
-                             <label class="input__label visually-hidden" for="user-name">Ім’я</label>
-                             <input class="input__control" type="text" name="user-name" id="user-name" placeholder="Ім’я">
+                                <label class="input__label visually-hidden" for="user-name">Ім’я</label>
+                                <input class="input__control" type="text" name="user-name" id="user-name"
+                                    placeholder="Ім’я">
                             </div>
-                         <div class="contact-section__form-field input">
-                             <label class="input__label visually-hidden" for="user-phone">Телефон</label>
-                             <input class="input__control" type="tel" name="user-phone" id="user-phone" placeholder="Телефон">
-                         </div>
-                         <div class="contact-section__form-field input">
-                             <label class="input__label visually-hidden" for="user-email">Електронна пошта</label>  
-                         <input class="input__control" type="email" name="user-email" id="user-email" placeholder="Електронна пошта">
-                         </div>
-                     <button class="contact-section__button button" type="submit">
-                         Замовити дзвінок
-                     </button>
-                     <p class="form__terms">Натискаючи на кнопку я погоджуюсь <a class="form__terms--link" href="#">з політикою конфіденційності</a></p>
-                         </form>
+                            <div class="contact-section__form-field input">
+                                <label class="input__label visually-hidden" for="user-phone">Телефон</label>
+                                <input class="input__control" type="tel" name="user-phone" id="user-phone"
+                                    placeholder="Телефон">
+                            </div>
+                            <div class="contact-section__form-field input">
+                                <label class="input__label visually-hidden" for="user-email">Електронна пошта</label>
+                                <input class="input__control" type="email" name="user-email" id="user-email"
+                                    placeholder="Електронна пошта">
+                            </div>
+                            <button class="contact-section__button button" type="submit">
+                                Замовити дзвінок
+                            </button>
+                            <p class="form__terms">Натискаючи на кнопку я погоджуюсь <a class="form__terms--link"
+                                    href="#">з політикою конфіденційності</a></p>
+                        </form>
                     </div>
                     <iframe class="contact-section__map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.892465097796!2d30.488653212580168!3d50.45667308679651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e1!3m2!1suk!2sua!4v1699531225714!5m2!1suk!2sua"
@@ -242,29 +260,33 @@
         </div>
     </footer>
     <div class="backdrop is-hidden">
-            <div class="modal">
-                <button class="modal-btn-close" type="button">Close</button>
-                <h2>Замовити дзвінок</h2>
-                <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-                <form name="modal-form" autocomplete="off" novalidate>
-                   <div class="modal__form-field input">
+        <div class="modal">
+            <button class="modal-btn-close" type="button">Close</button>
+            <h2>Замовити дзвінок</h2>
+            <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+            <form name="modal-form" autocomplete="off" novalidate>
+                <div class="modal__form-field input">
                     <label class="form-label visually-hidden" for="user-name">Ім’я</label>
-                    <input class="input__control" type="text" name="user-name" id="user-name" placeholder="Ім’я" required>
-                   </div>
-                   <div class="modal__form-field input">
-                    <label class="form-label visually-hidden" for="user-phone">Телефон</label>
-                    <input class="input__control" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" required>
-                   </div>
-                   <div class="modal__form-field input">
-                    <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>  
-                <input class="input__control" type="email" name="user-email" id="user-email" placeholder="Електронна пошта" required>
+                    <input class="input__control" type="text" name="user-name" id="user-name" placeholder="Ім’я"
+                        required>
                 </div>
-               <button class="modal__button button" type="submit">
-                Замовити дзвінок
+                <div class="modal__form-field input">
+                    <label class="form-label visually-hidden" for="user-phone">Телефон</label>
+                    <input class="input__control" type="tel" name="user-phone" id="user-phone" placeholder="Телефон"
+                        required>
+                </div>
+                <div class="modal__form-field input">
+                    <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
+                    <input class="input__control" type="email" name="user-email" id="user-email"
+                        placeholder="Електронна пошта" required>
+                </div>
+                <button class="modal__button button" type="submit">
+                    Замовити дзвінок
                 </button>
-                <p class="form-terms">Натискаючи на кнопку я погоджуюсь <a class="form-terms__link" href="#">з політикою конфіденційності</a></p>
-                </form>
-            </div>
+                <p class="form-terms">Натискаючи на кнопку я погоджуюсь <a class="form-terms__link" href="#">з політикою
+                        конфіденційності</a></p>
+            </form>
+        </div>
 
     </div>
     <script src="/js/modal.js"></script>

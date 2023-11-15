@@ -1,38 +1,35 @@
 .input {
-	position: relative;
+  position: relative;
 
-	 &__label {
-		position: absolute;
-		left: 42px;
-		top: 16px;
-		}
+  &__label {
+    position: absolute;
+    left: 42px;
+    top: 16px;
+  }
 
-	&__control {
-			padding: 16px 42px;
-			width: 100%;
-			border: 1px solid var(--color-secondary-dark);
-			border-radius: 8px;
-			background-color: transparent;
-			font-size: 16px;
-			line-height: 1.17;
-			margin-bottom: 32px;
+  &__control {
+    padding: 16px 42px;
+    width: 100%;
+    border: 1px solid var(--color-secondary-dark);
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1.17;
+    margin-bottom: 32px;
 
-			 &:focus {
-				border-color: var(--color-brand);
-				outline: none;
-			 }
-			 
-			 &::placeholder {
-			 color: var(--color-secondary-dark);
-			 font-size: 16px;
-			 line-height: 1.17;
-			 }
-			 
-			 &:focus::placeholder {
-				color: var(--color-primary-dark);
-			 }
-			}
+    &:focus {
+      border-color: var(--color-brand);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--color-secondary-dark);
+      font-size: 16px;
+      line-height: 1.17;
+    }
+
+    &:focus::placeholder {
+      color: var(--color-primary-dark);
+    }
+  }
 }
-
-
- 
