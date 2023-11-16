@@ -10,8 +10,8 @@ button.carousel-button {
   border: none;
   padding: 0;
   cursor: pointer;
-}
 
-button.carousel-button:hover {
-  background-color: var(--color-primary-dark);
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
 }
